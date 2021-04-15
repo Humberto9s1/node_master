@@ -1,0 +1,14 @@
+criar um diretório
+iniciar npm - npm init - cria packge.json
+
+npm install express --save
+npm install ejs --save
+npm install consign --save
+npm install body-parser --save
+npm install express-validator --save
+
+Estruta do diretórios 
+
+config(server.js)
+app.js
+app(controller, models, views, routes, public(css, js, images))
