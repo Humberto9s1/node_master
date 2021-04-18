@@ -1,7 +1,15 @@
 module.exports.newChat = function(application, req, res){
-    res.render("chat");
-}
+    var dadosForm =  req.body;
 
-module.exports.newChat = function(application, req, res){
+    req.assert('apelido', 'nome ou apelido é obrigatório').notEmpty();
+    req.assert('apelido', 'nome ou apelido deve conter entre 3 e 15 caractere').len(3, 15);
+
+    var erros = req.validationErrors(); 
+
+    if(erros){
+        res.render('index', {validacao : erros});
+        return;
+    }
+
     res.render("chat");
 }

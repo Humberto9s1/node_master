@@ -23,9 +23,9 @@ app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 /* configurar os middleware express-validator */
-app.use(express.static('./app/public'));
+app.use(expressValidator());
 
-/* efetua o auload das rotas  */
+/* efetua o auload das rotas, dos models e controllers para o objeto app */
     consign()
         .include('app/routes')
         .then('app/models')

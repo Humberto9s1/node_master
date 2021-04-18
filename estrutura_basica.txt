@@ -1,11 +1,11 @@
 criar um diretório
 iniciar npm - npm init - cria packge.json
 
-npm install express --save
-npm install ejs --save
-npm install consign --save
-npm install body-parser --save
-npm install express-validator --save
+npm install express@4.15.3 --save
+npm install ejs@2.5.6 --save
+npm install consign@0.1.6 --save
+npm install body-parser@1.17.2 --save
+npm install express-validator@3.2.0 --save
 
 Estruta do diretórios 
 
