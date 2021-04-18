@@ -1,3 +1,5 @@
+const { emit } = require("../../config/server");
+
 module.exports.newChat = function(application, req, res){
     var dadosForm =  req.body;
 
@@ -11,5 +13,10 @@ module.exports.newChat = function(application, req, res){
         return;
     }
 
-    res.render("chat");
+    application.get('io').emit(
+        'msgParaCliente',
+        {apelido : dadosForm.apelido, mensagem : 'acabou de entrar no chat.'}
+        );
+
+    res.render("chat", {dadosForm : dadosForm});
 }
